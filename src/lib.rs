@@ -2,6 +2,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 pub mod day1;
+pub mod day2;
 
 #[derive(Debug)]
 pub struct Answer {

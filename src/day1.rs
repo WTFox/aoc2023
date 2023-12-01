@@ -5,24 +5,24 @@ use std::collections::HashMap;
 pub fn solve() -> Answer {
     let file_lines = read_file_to_vec_lines("inputs/day1.txt");
     Answer {
-        part_one: part_one(file_lines.clone()).to_string(),
-        part_two: part_two(file_lines).to_string(),
+        part_one: part_one(&file_lines).to_string(),
+        part_two: part_two(&file_lines).to_string(),
     }
 }
 
-pub fn part_one(lines: Vec<String>) -> i64 {
+pub fn part_one(lines: &[String]) -> i32 {
     lines
         .iter()
         .map(|l| {
             let nums = l.chars().filter(|c| c.is_ascii_digit());
             let last = nums.clone().next().unwrap();
             let first = nums.clone().last().unwrap_or(last);
-            format!("{}{}", last, first).parse::<i64>().unwrap()
+            format!("{}{}", last, first).parse::<i32>().unwrap()
         })
         .sum()
 }
 
-pub fn part_two(lines: Vec<String>) -> i32 {
+pub fn part_two(lines: &[String]) -> i32 {
     lines
         .iter()
         .enumerate()

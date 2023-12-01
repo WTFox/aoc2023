@@ -10,23 +10,23 @@ fn test_overlaps() {
 fn example1() {
     let file_lines = read_file_to_vec_lines("inputs/day1.example.txt");
     assert_eq!(file_lines.len(), 4);
-    assert_eq!(part_one(file_lines), 142);
+    assert_eq!(part_one(&file_lines), 142);
 }
 
 #[test]
 fn example2() {
     let file_lines = read_file_to_vec_lines("inputs/day1.example2.txt");
-    assert_eq!(part_two(file_lines), 281);
+    assert_eq!(part_two(&file_lines), 281);
 }
 
 #[test]
 fn using_input1() {
     let file_lines = read_file_to_vec_lines("inputs/day1.txt");
-    assert_eq!(part_one(file_lines), 55621);
+    assert_eq!(part_one(&file_lines), 55621);
 }
 
 #[test]
 fn using_input2() {
     let file_lines = read_file_to_vec_lines("inputs/day1.txt");
-    assert_eq!(part_two(file_lines), 53592);
+    assert_eq!(part_two(&file_lines), 53592);
 }
