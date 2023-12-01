@@ -1,22 +1,4 @@
-use std::fs::File;
-use std::io::{BufRead, BufReader};
-
-mod day1;
-
-#[derive(Debug)]
-pub struct Answers {
-    part1: String,
-    part2: String,
-}
-
-fn read_file_to_vec_lines(filename: &str) -> Vec<String> {
-    let file = File::open(filename).expect("can't open file");
-    let reader = BufReader::new(file);
-    reader
-        .lines()
-        .map(|l| l.expect("can't read line"))
-        .collect()
-}
+use aoc2023::day1;
 
 fn main() {
     let args = std::env::args().collect::<Vec<String>>();
